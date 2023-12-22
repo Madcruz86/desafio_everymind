@@ -111,4 +111,25 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     border-width: 0px;
     background-color: transparent;
     cursor: pointer;
+    text-decoration: underline;
+}
+
+.remove-btn:hover{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-width: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #ffff;
+}
+
+.edit-btn {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-width: 0px;
+    background-color: transparent;
+    cursor: pointer;
 }
