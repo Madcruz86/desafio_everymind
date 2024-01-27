@@ -1,11 +1,11 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script type="text/javascript" src="./javaScript/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
     <title>Nunes Sports</title>
 </head>
 <body>
@@ -13,17 +13,17 @@
         <h1>Nunes Sports</h1>
     </div>
     <section id="table"> 
-        <form method="POST">
+        <form action="/api/produtos" method="POST">
             <div id="input-data">
-                <input id="name" class="input-text" placeholder="Nome do Produto" type="text" required />
-                <input id="cod" class="input-text" placeholder="Código do Produto" type="text" required />
-                <input id="desc" class="input-text" placeholder="Descrição do Produto" type="text" required />
-                <input id="price" class="input-text" placeholder="Preço do Produto" type="text" required />
-                <input class="input-btn" type="submit" value="Enviar" onclick="return addToTable()" />
+                <input id="codigo" class="input-text" placeholder="Código do Produto" type="text" required />
+                <input id="nome" class="input-text" placeholder="Nome do Produto" type="text" required />
+                <input id="descricao" class="input-text" placeholder="Descrição do Produto" type="text" required />
+                <input id="preco" class="input-text" placeholder="Preço do Produto" type="text" required />
+                <input class="input-btn" type="submit" value="Enviar" />
             </div>
         </form>
         <table id="tabelaProdutos">
-            <tr id="0">
+            <tr>
                 <th>Código</th>
                 <th>Nome</th>
                 <th>Descrição</th>
@@ -31,6 +31,8 @@
                 <th>Alterar / Remover</th>
             </tr>
         </table>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="script.js"></script>
     </section>
 </body>
 </html>

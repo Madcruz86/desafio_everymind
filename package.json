@@ -1,0 +1,18 @@
+{
+  "name": "desafio_everymind",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000d\u0000e\u0000s\u0000a\u0000f\u0000i\u0000o\u0000_\u0000e\u0000v\u0000e\u0000r\u0000y\u0000m\u0000i\u0000n\u0000d\u0000\r\u0000 \u0000",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.7"
+  }
+}
