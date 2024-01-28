@@ -3,9 +3,9 @@
 
 #nav {
     height: auto;
-    padding: 20px;
-    background: url("./imagens/sports.jpg") no-repeat center;
-    background-color: rgb(226, 43, 202);
+    padding: 10px;
+    background: url("./imagens/sports.jpg") no-repeat fixed;
+    background-color: aqua;
     color: white;
     font-size: 2em;
     font-family: 'Honk', system-ui;
@@ -51,6 +51,7 @@
 
 .input-btn {
     flex: 1;
+    min-width: 210px;
     margin: 5px;
     height: 39px;
     border-radius: 10px;
@@ -82,7 +83,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     margin: 0 auto;
     margin-top: 5vh;
     border-collapse: collapse;
-    overflow-x: auto; /* Adiciona rolagem horizontal em telas pequenas */
+    overflow-x: auto; 
 }
 
 @media only screen and (max-width: 600px) {
@@ -138,6 +139,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 
 #edit-btn {
+    font-weight: bold;
     border-radius: 10px;
     border: 1px solid rgb(122, 122, 122);
     width: 100px;
@@ -150,10 +152,12 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     background-color: rgb(240, 197, 6);
     border-radius: 10px;
     color: #ffff;
+    font-weight: bold;
 }
 
 #delet-btn {
     border-radius: 10px;
+    font-weight: bold;
     border: 1px solid rgb(122, 122, 122);
     width: 100px;
     color: #383838;
@@ -165,5 +169,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     background-color: rgb(240, 6, 6);
     border-radius: 10px;
     color: #ffff;
+    font-weight: bold;
 }
 
