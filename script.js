@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         <td>${produto.descricao}</td>
                         <td>${produto.preco}</td>
                         <td>
-                            <button onclick="editarProduto(${produto.id})">Editar</button>
-                            <button onclick="deletarProduto(${produto.id})">Deletar</button>
+                            <button id="edit-btn" onclick="editarProduto(${produto.id})">Editar</button>
+                            <button id="delet-btn" onclick="deletarProduto(${produto.id})">Deletar</button>
                         </td>
                     </tr>`);
                 });
@@ -45,12 +45,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     window.deletarProduto = function (produtoId) {
-        axios.delete(`http://localhost:3000/api/produtos/${produtoId}`)
-            .then(response => {
-                console.log(response.data);
-                carregarProdutos(); // Atualiza a tabela após cada exclusão
-            })
-            .catch(error => console.error('Erro ao deletar produto:', error));
+        // Pergunta ao usuário se realmente deseja deletar o produto
+        const confirmacao = confirm("Tem certeza que deseja deletar este produto?");
+        
+        if (confirmacao) {
+            // Se o usuário confirmar, então faz a requisição para deletar o produto
+            axios.delete(`http://localhost:3000/api/produtos/${produtoId}`)
+                .then(response => {
+                    console.log(response.data);
+                    carregarProdutos(); // Atualiza a tabela após cada exclusão
+                })
+                .catch(error => console.error('Erro ao deletar produto:', error));
+        }
     };
 
     window.editarProduto = function (produtoId) {
