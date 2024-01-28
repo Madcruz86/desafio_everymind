@@ -2,16 +2,23 @@
 /* --------------------------- Header --------------------------- */
 
 #nav {
-    width: 100%;
-    height: 20vh;
+    height: auto;
+    padding: 20px;
+    background: url("./imagens/sports.jpg") no-repeat center;
     background-color: rgb(226, 43, 202);
     color: white;
     font-size: 2em;
     font-family: 'Honk', system-ui;
     text-align: center;
-    line-height: 14vh;
-    margin-top: -50px;
 }
+
+@media only screen and (max-width: 600px) {
+    #nav {
+        height: auto;
+        line-height: normal;
+    }
+}
+
 
 /* --------------------------- Form --------------------------- */
 
@@ -21,6 +28,7 @@
     margin: 0 auto;
     margin-top: 5vh;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .input-text {
@@ -70,10 +78,17 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 #tabelaProdutos {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 5vh;
     border-collapse: collapse;
+    overflow-x: auto; /* Adiciona rolagem horizontal em telas pequenas */
+}
+
+@media only screen and (max-width: 600px) {
+    #tabelaProdutos th, #tabelaProdutos td {
+        font-size: 14px;
+    }
 }
 
 #tabelaProdutos th {
@@ -95,6 +110,18 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 #tabelaProdutos tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+#edit-btn, #delet-btn {
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+    #edit-btn, #delet-btn {
+        width: auto;
+    }
 }
 
 
